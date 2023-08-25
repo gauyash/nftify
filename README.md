@@ -1,0 +1,3 @@
+# NFTify
+
+- work in progress :)
