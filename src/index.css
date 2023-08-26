@@ -4,6 +4,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -26,6 +28,10 @@ ol[role='list'] {
   list-style: none;
 }
 
+html{
+  font-size: 62.5%;
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -36,6 +42,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */

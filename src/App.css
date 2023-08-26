@@ -1,0 +1,330 @@
+:root {
+  --primary: #390554;
+  --secondary: #960252;
+  --accent-clr: rgba(124, 15, 53, 1);
+  --sidebar-bg: #292929;
+  --active-state: #f30050;
+}
+
+.clr_white {
+  color: white;
+}
+
+.clr_black {
+  color: black;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: 0.8rem;
+}
+
+.gap-md {
+  gap: 1.2rem;
+}
+
+.gap-lg {
+  gap: 1.8rem;
+}
+
+.container {
+  margin-inline: auto;
+  padding: 0 0 5rem 0;
+}
+
+.sidebar {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  transition: opacity 400ms ease-in-out;
+  opacity: 0;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  background-color: var(--sidebar-bg);
+  height: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    display: flex;
+  }
+
+  .sidebar {
+    display: block;
+    width: 15%;
+    background-color: var(--sidebar-bg);
+    padding: 3rem 0 2.5rem 0;
+    opacity: 1;
+    visibility: visible;
+    border-top-right-radius: 20px;
+    height: auto;
+  }
+
+  .close_icon {
+    display: none;
+  }
+
+  .sidebar > div {
+    height: 100%;
+  }
+
+  .card {
+    width: 25%;
+  }
+}
+.main {
+  width: 85%;
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding: 0 4rem;
+  }
+}
+
+.bg {
+  background-image: url(/images/background.png);
+  background-position: top left;
+  position: relative;
+  isolation: isolate;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+form > div {
+  width: 100%;
+}
+
+.logo_box {
+  width: 50%;
+}
+@media (min-width: 1200px) {
+  .connect_button {
+    order: 2;
+  }
+
+  .logo_box {
+    display: none;
+  }
+}
+
+.heading {
+  margin-bottom: 3rem;
+}
+
+.menu {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.logo_container {
+  padding: 0 2rem;
+}
+
+form {
+  padding: 2.7rem 0 0 0;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  form {
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card_container > div {
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--primary);
+  color: white;
+  padding: 4rem 4rem 6rem 4rem;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1580px) {
+  .card {
+    width: 24%;
+  }
+}
+.card_heading {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.card h5 {
+  font-weight: 500;
+}
+
+.icon {
+  background-color: var(--secondary);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.9rem;
+}
+
+.icon img {
+  width: 3rem;
+}
+
+.connect_button {
+  background-color: var(--accent-clr);
+  padding: 0.9rem 3rem;
+  border: none;
+  border-radius: 11px;
+  outline: none;
+}
+
+.search_bar {
+  border: px solid #ccc;
+  padding: 0.5rem 1.4rem;
+  border-radius: 20px;
+  border: 2px solid white;
+  margin: 2rem 0;
+  background-color: var(--accent-clr);
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .search_bar {
+    width: 70%;
+    order: 1;
+    max-width: 45rem;
+  }
+}
+
+.search_bar::before {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.search_bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search_bar ::-webkit-input-placeholder {
+  color: white;
+}
+
+.search_bar_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.navigation {
+  margin: 2rem 0;
+}
+
+.navigation li {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+
+.social_media {
+  color: var(--active-state);
+  font-size: 2rem;
+  padding: 0 2rem 4rem 2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  content: "";
+  background-color: var(--active-state);
+}
+
+.none {
+  display: none;
+}
+
+.card_container > div {
+  padding-bottom: 2rem;
+}
+
+.selected_tab {
+  background-color: var(--active-state);
+}
